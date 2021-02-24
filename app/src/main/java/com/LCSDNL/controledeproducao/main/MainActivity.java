@@ -1,7 +1,8 @@
-package com.LCSDNL.controledeproducao;
+package com.LCSDNL.controledeproducao.main;
 
 import android.os.Bundle;
 
+import com.LCSDNL.controledeproducao.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
