@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".lista_funcionario.activity_Cadastro_Funcionario">
+    tools:context=".rep_modelos.activity_Cadastro_Modelo">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
