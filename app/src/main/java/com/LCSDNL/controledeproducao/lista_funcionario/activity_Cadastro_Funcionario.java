@@ -1,10 +1,12 @@
-package com.LCSDNL.controledeproducao;
+package com.LCSDNL.controledeproducao.lista_funcionario;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Cadastro extends AppCompatActivity {
+import com.LCSDNL.controledeproducao.R;
+
+public class activity_Cadastro_Funcionario extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
