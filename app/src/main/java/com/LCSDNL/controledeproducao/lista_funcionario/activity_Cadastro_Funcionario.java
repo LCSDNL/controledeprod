@@ -12,5 +12,6 @@ public class activity_Cadastro_Funcionario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
+        setTitle(getString(R.string.titulo_cadastro_de_funcionarios_activity));
     }
 }

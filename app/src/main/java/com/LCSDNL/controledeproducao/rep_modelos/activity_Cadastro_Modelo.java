@@ -12,5 +12,6 @@ public class activity_Cadastro_Modelo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__cadastro__modelo);
+        setTitle(getString(R.string.titulo_cadastro_de_modelos_activity));
     }
 }

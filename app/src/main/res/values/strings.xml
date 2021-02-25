@@ -11,4 +11,8 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity__lista__funcionarios">activity_Lista_Funcionarios</string>
     <string name="title_activity__lista__modelos">activity_Lista_Modelos</string>
+    <string name="titulo_lista_funcionarios_activity">Lista de Funcionários</string>
+    <string name="titulo_lista_de_modelos_activity">Lista de Modelos</string>
+    <string name="titulo_cadastro_de_modelos_activity">Cadastro de Modelos</string>
+    <string name="titulo_cadastro_de_funcionarios_activity">Cadastro de funcionários</string>
 </resources>

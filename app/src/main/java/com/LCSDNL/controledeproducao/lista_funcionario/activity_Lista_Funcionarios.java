@@ -1,14 +1,12 @@
 package com.LCSDNL.controledeproducao.lista_funcionario;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import android.view.View;
 
 import com.LCSDNL.controledeproducao.R;
 
@@ -20,18 +18,26 @@ public class activity_Lista_Funcionarios extends AppCompatActivity {
         setContentView(R.layout.activity__lista__funcionarios);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        setTitle(getString(R.string.titulo_lista_funcionarios_activity));
 
         fabAddFuncionario();
+
+
     }
 
+
+
+// FAB start
     private void fabAddFuncionario() {
-        FloatingActionButton fab = findViewById(R.id.fab_add_funcioanrio);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
+        FloatingActionButton fab = findViewById(R.id.fab_add_funcionario);
+        fab.setOnClickListener(v -> {
+            addFuncionario();
         });
     }
+
+    private void addFuncionario() {
+        startActivity(new Intent(this, activity_Cadastro_Funcionario.class));
+    }
 }
+// FAB end
+
