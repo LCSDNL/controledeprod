@@ -15,9 +15,9 @@ Lista TO DO;
 - [ ] função de calculo, rendimento/retorno(mensal);
 
 
-<h2>Diário<h2>
+# <h2>Diário<h2>
 
-<h3>Dia 1<h3>
+<h3> Dia 1 <h3>
 
 criei o projeto no AS, editei algumas coisas no mainActivity e fiquei com dor de cabeça por causa
 do git, o camando `git push - u origin <branch>` nao me permitia trocar pra outra branch remota além
