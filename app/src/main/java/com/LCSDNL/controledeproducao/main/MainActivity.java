@@ -1,8 +1,11 @@
 package com.LCSDNL.controledeproducao.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.LCSDNL.controledeproducao.R;
+import com.LCSDNL.controledeproducao.lista_funcionario.activity_Lista_Funcionarios;
+import com.LCSDNL.controledeproducao.rep_modelos.activity_Lista_Modelos;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -13,6 +16,7 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,8 +30,46 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         setTitle(TITLLE_APPBAR);
 
-
+        abreListaModelos();
+        abreListaFuncionarios();
     }
+
+    private void abreListaFuncionarios() {
+        Button buttonFunc= findViewById(R.id.button_Funcionario);
+        buttonFunc.setOnClickListener(v ->{
+            listaFuncionarios();
+        });
+    }
+
+    private void listaFuncionarios() {
+        startActivity(new Intent(this,
+                activity_Lista_Funcionarios.class));
+    }
+
+
+    private void abreListaModelos(){
+        Button buttonModelos = findViewById(R.id.button_modelo);
+        buttonModelos.setOnClickListener(v -> {
+            listaModelos();
+//
+        });
+    }
+    private void listaModelos() {
+        startActivity(new Intent(this,
+                activity_Lista_Modelos.class));
+    }
+
+
+
+
+
+
+
+
+
+//    ===============================================================================================
+//    depois eu vejo se precisa ou nao
+//    ===============================================================================================
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
