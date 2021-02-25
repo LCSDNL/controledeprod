@@ -15,16 +15,16 @@ Lista TO DO;
 - [ ] função de calculo, rendimento/retorno(mensal);
 
 
-# <h2>Diário<h2>
+# Diário
 
-Dia 1 
+### Dia 1 
 
 criei o projeto no AS, editei algumas coisas no mainActivity e fiquei com dor de cabeça por causa
 do git, o camando `git push - u origin <branch>` nao me permitia trocar pra outra branch remota além
 da master, depois de pesquisar um bom tempo achei uma solução no
 stackoverflow usando `git push origin HEAD:<branch>`.
 
-Dia 2
+### Dia 2
 
 depois de organizar a pastas e dividir as classes nelas, criei e configurei os botoes FAB das listas
 de funcionários e tambem dos Modelos, tambem organizei o layout das views dessas activitys, ainda
