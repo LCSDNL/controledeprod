@@ -21,7 +21,11 @@ public class activity_Lista_Funcionarios extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab_add_modelo);
+        fabAddFuncionario();
+    }
+
+    private void fabAddFuncionario() {
+        FloatingActionButton fab = findViewById(R.id.fab_add_funcioanrio);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
