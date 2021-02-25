@@ -17,14 +17,14 @@ Lista TO DO;
 
 # <h2>Diário<h2>
 
-<h3> Dia 1 <h3>
+Dia 1 
 
 criei o projeto no AS, editei algumas coisas no mainActivity e fiquei com dor de cabeça por causa
 do git, o camando `git push - u origin <branch>` nao me permitia trocar pra outra branch remota além
 da master, depois de pesquisar um bom tempo achei uma solução no
 stackoverflow usando `git push origin HEAD:<branch>`.
 
-<h3>Dia 2<h3>
+Dia 2
 
 depois de organizar a pastas e dividir as classes nelas, criei e configurei os botoes FAB das listas
 de funcionários e tambem dos Modelos, tambem organizei o layout das views dessas activitys, ainda
