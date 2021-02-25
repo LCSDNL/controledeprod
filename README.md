@@ -1,8 +1,8 @@
 # <h1> Aplicativo Android para auxiliar no controle de produção<h1>
 
-Durante o desenvolvimento atualizarei o diário;
+#### Durante o desenvolvimento atualizarei o diário;
 
-Lista TO DO;
+### Lista TO DO;
 - [x] inicialização do projeto e pacotes do AndroidStudio;
 - [x] organização da estrutura do projeto;
 - [x] definição do layout Main;
@@ -14,10 +14,12 @@ Lista TO DO;
 - [ ] inserção de gastos;
 - [ ] função de calculo, rendimento/retorno(mensal);
 
+#
+#
 
 # Diário
 
-#
+
 
 ### Dia 1 
 
