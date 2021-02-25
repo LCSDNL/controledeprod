@@ -17,6 +17,8 @@ Lista TO DO;
 
 # Diário
 
+#
+
 ### Dia 1 
 
 criei o projeto no AS, editei algumas coisas no mainActivity e fiquei com dor de cabeça por causa
