@@ -4,12 +4,12 @@ public class ScriptDLL {
 
 	public static String getCreateTableFuncionario(){
 		StringBuilder sql= new StringBuilder();
-		sql.append("  CREATE TABLE IF NOT EXISTS pessoas (");
+		sql.append("  CREATE TABLE IF NOT EXISTS PESSOAS (");
 		sql.append(" 		 ID           INTEGER      PRIMARY KEY AUTOINCREMENT NOT NULL,");
 		sql.append(" 		 nome         VARCHAR (70) NOT NULL,");
 		sql.append(" 		 cpf          VARCHAR (20) DEFAULT (),");
-		sql.append(" 		 telefone     VARCHAR (20) DEFAULT (),");
-		sql.append(" 		 [valor/hora] DOUBLE (10) NOT NULL (),");
+		sql.append(" 		 telefone	  VARCHAR (20) DEFAULT (),");
+		sql.append(" 		 valor		  DOUBLE (10) NOT NULL (),");
 		sql.append(" 		 cargo		  VARCHAR (50) DEFAULT () );");
 
 		return sql.toString();
@@ -19,7 +19,7 @@ public class ScriptDLL {
 	public  static  String getCreateTableModelos(){
 
 		StringBuilder sql=new StringBuilder();
-	sql.append("	CREATE TABLE IF NOT EXISTS modelos ( ");
+	sql.append("	CREATE TABLE IF NOT EXISTS MODELOS ( ");
 	sql.append("			ID		INTEGER      PRIMARY KEY AUTOINCREMENT ");
 	sql.append("			NOT NULL, ");
 	sql.append("			modelo 	VARCHAR (30) NOT NULL ");
