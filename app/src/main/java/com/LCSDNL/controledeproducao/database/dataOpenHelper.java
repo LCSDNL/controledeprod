@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class dataOpenHelper extends SQLiteOpenHelper {
+
     public dataOpenHelper(@Nullable Context context) {
         super(context, "dados", null, 1);
     }
@@ -14,6 +15,7 @@ public class dataOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(ScriptDLL.getCreateTableFuncionario());
+        db.execSQL(ScriptDLL.getCreateTableModelos());
     }
 
     @Override
