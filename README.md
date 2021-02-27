@@ -31,7 +31,17 @@ stackoverflow usando `git push origin HEAD:<branch>`.
 ### Dia 2
 
 depois de organizar a pastas e dividir as classes nelas, criei e configurei os botoes FAB das listas
-de funcionários e tambem dos Modelos, tambem organizei o layout das views dessas activitys, ainda
+de funcionários e também dos Modelos, também organizei o layout das views dessas activitys, ainda
 falta o BD para preencher elas e depois começar a fazer as opções de delete e edit, eu poderia
 fazer um DAO, mas nesse caso seria como ficar indo e voltando, depois eu faço uns 2 modelos
-estaticos pra teste.
+estáticos pra teste.
+
+### Dia 3
+
+comecei a criação do BD usando o SQLite nativo e um método de entidades e repositório, fiz os métodos
+inserir, editar, excluir e buscar todos. Foi um pouco demorado por que eu não sabia como fazer essas
+partes, já estou ficando habituado a ler a sugestão de código para ver quais são os parâmetros para
+preencher os métodos. Ainda não compreendo muito bem ContentValue, quero dizer eu sei que ele
+armazena valores, mas seu uso ainda não é algo intuitivo para mim, talvez seja também por causa dos
+métodos do SQLiteDatabase que tem muita novidade para mim. Foi legal usar o StringBuilder ao invés
+de concatenar Strings, isso eu não aprendi na faculdade.
