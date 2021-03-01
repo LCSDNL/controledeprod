@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         layoutMain = findViewById(R.id.layout_main_activity);
         criarConexao();
+
     }
 
     private void criarConexao(){
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             dlg.setTitle("erro");
             dlg.setMessage(exe.getMessage());
             dlg.setNeutralButton("ok", null);
+
         }
     }
 

@@ -23,7 +23,7 @@ public class Repo_modelo {
         contentValues.put("tipo", modelo.tipo);
         contentValues.put("valor", modelo.valor);
 
-        conexao.insertOrThrow("MODELOS", null, contentValues);
+        conexao.insertOrThrow("modelos", null, contentValues);
 
     }
 
@@ -31,7 +31,7 @@ public class Repo_modelo {
         String[] parameters= new String[1];
         parameters[0]= String.valueOf(id);
 
-        conexao.delete("MODELOS", "ID= ?", parameters);
+        conexao.delete("modelos", "ID= ?", parameters);
 
     }
 
@@ -44,10 +44,8 @@ public class Repo_modelo {
         String[] parameters= new String[1];
         parameters[0]= String.valueOf(modelo.id);
 
-        conexao.update("MODELOS", contentValues, "ID= ?", parameters);
+        conexao.update("modelos", contentValues, "ID= ?", parameters);
     }
-
-
 
     public List<Modelo> buscarTodos(){
 
@@ -55,7 +53,7 @@ public class Repo_modelo {
 
             StringBuilder sql = new StringBuilder();
             sql.append("SELECT id, modelo, tipo, valor");
-            sql.append("FROM MODELOS");
+            sql.append("FROM modelos");
 
 
         Cursor resultado= conexao.rawQuery(sql.toString(), null);
@@ -76,9 +74,6 @@ public class Repo_modelo {
 
         return modelos;
     }
-
-
-
 
     public  Modelo bucarModelo(int id){
         return null;

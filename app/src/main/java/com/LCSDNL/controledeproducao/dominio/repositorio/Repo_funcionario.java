@@ -26,7 +26,7 @@ import java.util.List;
         contentValues.put("valor", funcionario.valor);
         contentValues.put("cargo", funcionario.cargo);
 
-        conexao.insertOrThrow("PESSOAS", null, contentValues);
+        conexao.insertOrThrow("pessoas", null, contentValues);
 
     }
 
@@ -35,7 +35,7 @@ import java.util.List;
         String[] parameters=new String[1];
         parameters[0]= String.valueOf(id);
 
-        conexao.delete("PESSOAS", "ID = ?",parameters);
+        conexao.delete("pessoas", "ID = ?",parameters);
     }
 
     public void editar(Funcionario funcionario){
@@ -49,7 +49,7 @@ import java.util.List;
         String[] parameters=new String[1];
         parameters[0]= String.valueOf(funcionario.id);
 
-        conexao.update("PESSOAS", contentValues, "ID = ?",parameters);
+        conexao.update("pessoas", contentValues, "ID = ?",parameters);
 
     }
 
@@ -58,7 +58,7 @@ import java.util.List;
 
         StringBuilder sql = new StringBuilder();
         sql.append("SELECT id, nome, cpf, telefone, valor, cargo");
-        sql.append("FROM PESSOAS");
+        sql.append("FROM pessoas");
 
         Cursor resultado= conexao.rawQuery(sql.toString(),null);
             if (resultado.getCount()>0){
