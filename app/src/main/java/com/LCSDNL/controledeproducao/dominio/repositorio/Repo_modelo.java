@@ -76,6 +76,27 @@ public class Repo_modelo {
     }
 
     public  Modelo bucarModelo(int id){
+
+        Modelo modelos = new Modelo();
+        StringBuilder sql = new StringBuilder();
+        sql.append("SELECT id, modelo, tipo, valor");
+        sql.append("FROM modelos");
+        sql.append("WHERE ID = ?");
+
+        String[] parameters= new String[1];
+        parameters[0]= String.valueOf(id);
+
+        Cursor resultado = conexao.rawQuery(sql.toString(), parameters);
+
+            if (resultado.getCount()>0) {
+                resultado.moveToFirst();
+
+                Modelo mod = new Modelo();
+                modelos.id = resultado.getInt(resultado.getColumnIndexOrThrow("id"));
+                modelos.modelo = resultado.getString(resultado.getColumnIndexOrThrow("modelo"));
+                modelos.tipo = resultado.getString(resultado.getColumnIndexOrThrow("tipo"));
+                modelos.valor = resultado.getDouble(resultado.getColumnIndexOrThrow("valor"));
+            }
         return null;
     }
 

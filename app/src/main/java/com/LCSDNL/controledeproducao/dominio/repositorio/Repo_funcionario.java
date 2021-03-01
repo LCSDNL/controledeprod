@@ -10,7 +10,7 @@ import com.LCSDNL.controledeproducao.dominio.entidades.Modelo;
 import java.util.ArrayList;
 import java.util.List;
 
-    public class Repo_funcionario {
+public class Repo_funcionario {
 
     private SQLiteDatabase conexao;
 
@@ -39,6 +39,7 @@ import java.util.List;
     }
 
     public void editar(Funcionario funcionario){
+
         ContentValues contentValues= new ContentValues();
         contentValues.put("nome", funcionario.nome);
         contentValues.put("cpf", funcionario.cpf);
@@ -54,6 +55,7 @@ import java.util.List;
     }
 
     public List<Funcionario> buscarTodos(){
+
         List<Funcionario> funcionarios = new ArrayList<Funcionario>();
 
         StringBuilder sql = new StringBuilder();
@@ -76,13 +78,35 @@ import java.util.List;
                 }while(resultado.moveToNext());
 
             }
-
-
-
-        return funcionarios;
+            return funcionarios;
     }
 
     public Funcionario buscarFuncionario(int id){
+
+        Funcionario funcionario = new Funcionario();
+
+        StringBuilder sql = new StringBuilder();
+        sql.append("SELECT id, nome, cpf, telefone, valor, cargo");
+        sql.append("FROM pessoas");
+        sql.append("WHERE ID = ?");
+
+        String[] parameters=new String[1];
+        parameters[0]= String.valueOf(id);
+
+       Cursor resultado= conexao.rawQuery(sql.toString(), parameters);
+            if (resultado.getCount()>0) {
+                resultado.moveToFirst();
+
+                funcionario.id = resultado.getInt(resultado.getColumnIndexOrThrow("id"));
+                funcionario.nome = resultado.getString(resultado.getColumnIndexOrThrow("nome"));
+                funcionario.cpf = resultado.getString(resultado.getColumnIndexOrThrow("cpf"));
+                funcionario.telefone = resultado.getString(resultado.getColumnIndexOrThrow("telefone"));
+                funcionario.valor = resultado.getDouble(resultado.getColumnIndexOrThrow("valor"));
+                funcionario.cargo = resultado.getString(resultado.getColumnIndexOrThrow("cargo"));
+
+                return funcionario;
+            }
+
         return  null;
     }
 }
