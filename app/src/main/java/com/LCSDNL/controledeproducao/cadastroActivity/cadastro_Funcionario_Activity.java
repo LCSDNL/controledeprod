@@ -1,4 +1,4 @@
-package com.LCSDNL.controledeproducao.lista_funcionario;
+package com.LCSDNL.controledeproducao.cadastroActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,12 +6,12 @@ import android.os.Bundle;
 
 import com.LCSDNL.controledeproducao.R;
 
-public class activity_Cadastro_Funcionario extends AppCompatActivity {
+public class cadastro_Funcionario_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro);
+        setContentView(R.layout.activity_cadastro_funcionario);
         setTitle(getString(R.string.titulo_cadastro_de_funcionarios_activity));
     }
 }

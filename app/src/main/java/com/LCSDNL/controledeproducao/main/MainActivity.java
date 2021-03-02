@@ -8,16 +8,14 @@ import android.os.Bundle;
 
 import com.LCSDNL.controledeproducao.R;
 import com.LCSDNL.controledeproducao.database.dataOpenHelper;
-import com.LCSDNL.controledeproducao.lista_funcionario.activity_Lista_Funcionarios;
-import com.LCSDNL.controledeproducao.rep_modelos.activity_Lista_Modelos;
+import com.LCSDNL.controledeproducao.lista_funcionario.lista_Funcionarios_Activity;
+import com.LCSDNL.controledeproducao.rep_modelos.lista_Modelos_Activity;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -73,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void listaFuncionarios() {
         startActivity(new Intent(this,
-                activity_Lista_Funcionarios.class));
+                lista_Funcionarios_Activity.class));
     }
 
 
@@ -86,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void listaModelos() {
         startActivity(new Intent(this,
-                activity_Lista_Modelos.class));
+                lista_Modelos_Activity.class));
     }
 
 }

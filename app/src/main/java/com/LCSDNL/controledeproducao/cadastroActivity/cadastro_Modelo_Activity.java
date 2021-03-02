@@ -1,4 +1,4 @@
-package com.LCSDNL.controledeproducao.rep_modelos;
+package com.LCSDNL.controledeproducao.cadastroActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.LCSDNL.controledeproducao.R;
 
-public class activity_Cadastro_Modelo extends AppCompatActivity {
+public class cadastro_Modelo_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
