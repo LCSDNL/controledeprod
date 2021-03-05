@@ -8,7 +8,7 @@
 - [x] definição do layout Main;
 - [x] ajuste no fluxo inicial do aplicativo;
 - [x] integração com o BD;
-- [ ] fluxo do cadastro;
+- [x] fluxo do cadastro;
 - [ ] opções de ações nas listas;
 - [ ] função de calculo, adição e edição de produção diario;
 - [ ] inserção de gastos;
