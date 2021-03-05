@@ -8,7 +8,7 @@
 - [x] definição do layout Main;
 - [x] ajuste no fluxo inicial do aplicativo;
 - [x] integração com o BD;
-- [ ] fluxo do cadastro;
+- [x] fluxo do cadastro;
 - [ ] opções de ações nas listas;
 - [ ] função de calculo, adição e edição de produção diario;
 - [ ] inserção de gastos;
@@ -51,3 +51,12 @@ de concatenar Strings, isso eu não aprendi na faculdade.
 Finalizei a integração com o banco de dados por hora, organizei o layout das caixas de texto nas 
 activitys de cadastro de funcionario e modelo. Foi bem tranquilo o dia de hoje também por que as 
 aulas da faculdade voltaram essa semana.
+
+### Dia 5
+
+Adicionei os botões de salvar e cancelar aos cadastros e fiz uma validação de campos, refatorei
+algumas IDs e o nome de algumas activitys, agora o próximo passo é fazer o botão salvar enviar os dados 
+para o BD e depois retornar eles para exibir na tela de listas. Por enquanto está sendo bem tranquilo, 
+segui alguns tutorias para fazer algumas partes que não sabia. Existem muitas bibliotecas no Java, não
+tem como já sair fazendo, é preciso conhecer algumas técnicas e ferramentas, coisa que só se aprende com
+experiência mesmo.

@@ -3,7 +3,7 @@ package com.LCSDNL.controledeproducao.lista_funcionario;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.LCSDNL.controledeproducao.cadastroActivity.cadastro_Funcionario_Activity;
+import com.LCSDNL.controledeproducao.cadastroActivity.Cadastro_Funcionario_Activity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +11,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.LCSDNL.controledeproducao.R;
 
-public class lista_Funcionarios_Activity extends AppCompatActivity {
+public class Lista_Funcionarios_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class lista_Funcionarios_Activity extends AppCompatActivity {
     }
 
     private void addFuncionario() {
-        startActivity(new Intent(this, cadastro_Funcionario_Activity.class));
+        startActivity(new Intent(this, Cadastro_Funcionario_Activity.class));
     }
 }
 // FAB end

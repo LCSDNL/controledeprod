@@ -16,4 +16,12 @@
     <string name="titulo_cadastro_de_modelos_activity">Cadastro de Modelos</string>
     <string name="titulo_cadastro_de_funcionarios_activity">Cadastro de funcionários</string>
     <string name="title_activity_main2">MainActivity</string>
+    <string name="button_cancelar">Cancelar</string>
+    <string name="button_salvar">Salvar</string>
+    <string name="modelo">Modelo</string>
+    <string name="valor_Modelo">Valor</string>
+    <string name="tipo_Modelo">Tipo</string>
+    <string name="aviso_EmptyField">Atenção existem campos em branco!</string>
+    <string name="OK">OK</string>
+    <string name="titulo_Aviso">Aviso!</string>
 </resources>

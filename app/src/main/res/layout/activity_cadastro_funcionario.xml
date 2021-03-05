@@ -9,7 +9,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textViewNome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -27,13 +27,13 @@
         android:inputType="textPersonName"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        app:layout_constraintEnd_toEndOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="@+id/textViewNome"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintStart_toStartOf="@+id/textViewNome"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNome" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textViewCPF"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -49,13 +49,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCPF"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintStart_toStartOf="@+id/textViewCPF"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCPF" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textViewTelefone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -70,13 +70,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTelefone"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintStart_toStartOf="@+id/textViewTelefone"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTelefone" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textViewCargo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -92,13 +92,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCargo"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintStart_toStartOf="@+id/textViewCargo"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCargo" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textViewValor_Hora"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -115,10 +115,34 @@
         android:ems="10"
         android:hint="0.00"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="@+id/textViewValor_Hora"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintStart_toStartOf="@+id/textViewValor_Hora"
+        app:layout_constraintTop_toBottomOf="@+id/textViewValor_Hora" />
+
+    <Button
+        android:id="@+id/buttonCancelarFuncionario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/button_cancelar"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSalvarFuncionario"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonSalvarFuncionario"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSalvarFuncionario" />
+
+    <Button
+        android:id="@+id/buttonSalvarFuncionario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/button_salvar"
+        app:layout_constraintEnd_toEndOf="@+id/editTextFuncionarioValor"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextFuncionarioValor"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFuncionarioValor" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
