@@ -63,9 +63,9 @@ public class Cadastro_Modelo_Activity extends AppCompatActivity {
 
     private void validarCampos(){
         notValido= false;
-        String vModelo= modelo.getText().toString();
-        String vTipo= tipo.getText().toString();
-        String vValor=valor.getText().toString();
+        String vModelo  = modelo.getText().toString();
+        String vTipo    = tipo.getText().toString();
+        String vValor   =valor.getText().toString();
 
         if (isVazio(vModelo)){
             modelo.requestFocus();

@@ -69,11 +69,11 @@ public class Cadastro_Funcionario_Activity extends AppCompatActivity {
 
     private void validarCampos(){
         notValido= false;
-        String vNome = nome.getText().toString() ;
-        String vCPF = cpf.getText().toString();
+        String vNome    = nome.getText().toString() ;
+        String vCPF     = cpf.getText().toString();
         String vTelefone= telefone.getText().toString();
-        String vValor= valor.getText().toString();
-        String vCargo= cargo.getText().toString();
+        String vValor   = valor.getText().toString();
+        String vCargo   = cargo.getText().toString();
 
 
         if (isVazio(vNome)){
