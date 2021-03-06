@@ -62,26 +62,26 @@ public class Cadastro_Modelo_Activity extends AppCompatActivity {
     }
 
     private void validarCampos(){
-        notValido= false;
+        this.notValido= false;
         String vModelo  = modelo.getText().toString();
         String vTipo    = tipo.getText().toString();
         String vValor   =valor.getText().toString();
 
         if (isVazio(vModelo)){
             modelo.requestFocus();
-            notValido= true;
+            this.notValido= true;
             }else
                 if (isVazio(vTipo)){
                     tipo.requestFocus();
-                    notValido=true;
+                    this.notValido=true;
                 } else
                     if (isVazio(vValor)){
                         valor.requestFocus();
-                        notValido=true;
+                        this.notValido=true;
                     }
 
 
-        if (notValido){
+        if (this.notValido){
              AlertDialog.Builder dlg= new AlertDialog.Builder(this);
              dlg.setTitle(R.string.titulo_Aviso);
              dlg.setMessage(R.string.aviso_EmptyField);

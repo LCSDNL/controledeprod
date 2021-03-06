@@ -68,7 +68,7 @@ public class Cadastro_Funcionario_Activity extends AppCompatActivity {
     }
 
     private void validarCampos(){
-        notValido= false;
+        this.notValido = false;
         String vNome    = nome.getText().toString() ;
         String vCPF     = cpf.getText().toString();
         String vTelefone= telefone.getText().toString();
@@ -78,26 +78,26 @@ public class Cadastro_Funcionario_Activity extends AppCompatActivity {
 
         if (isVazio(vNome)){
             nome.requestFocus();
-            notValido =true;
+            this.notValido =true;
         }else
             if(isVazio(vCPF)){
                 cpf.requestFocus();
-                notValido =true;
+                this.notValido =true;
             }else
                 if(isVazio(vTelefone)){
                     telefone.requestFocus();
-                    notValido =true;
+                    this.notValido =true;
                 }else
                     if (isVazio(vValor)){
                         valor.requestFocus();
-                        notValido =true;
+                        this.notValido =true;
                     }else
                         if (isVazio(vCargo)) {
                             cargo.requestFocus();
-                            notValido = true;
+                            this.notValido = true;
                         }
 
-        if (notValido){
+        if (this.notValido){
             AlertDialog.Builder dlg= new AlertDialog.Builder(this);
             dlg.setTitle(R.string.titulo_Aviso);
             dlg.setMessage(R.string.aviso_EmptyField);
