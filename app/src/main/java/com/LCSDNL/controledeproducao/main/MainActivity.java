@@ -20,8 +20,6 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String TITLLE_APPBAR = "Inicio";
-
     private SQLiteDatabase conexao;
     private dataOpenHelper dataOH;
     private ConstraintLayout layoutMain;
@@ -32,13 +30,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setTitle(TITLLE_APPBAR);
+        setTitle(getString(R.string.titulo_main));
+        layoutMain = findViewById(R.id.layout_main_activity);
 
+        criarConexao();
         abreListaModelos();
         abreListaFuncionarios();
 
-        layoutMain = findViewById(R.id.layout_main_activity);
-        criarConexao();
 
     }
 
@@ -57,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
             dlg.setMessage(exe.getMessage());
             dlg.setNeutralButton("ok", null);
             dlg.show();
-
         }
     }
 
@@ -75,12 +72,10 @@ public class MainActivity extends AppCompatActivity {
                 Lista_Funcionarios_Activity.class));
     }
 
-
     private void abreListaModelos(){
         Button buttonModelos = findViewById(R.id.button_modelo);
         buttonModelos.setOnClickListener(v -> {
             listaModelos();
-//
         });
     }
 

@@ -33,6 +33,7 @@ public class Cadastro_Funcionario_Activity extends AppCompatActivity {
     private EditText cargo;
 
     private boolean notValido;
+
     private Repo_funcionario repo_funcionario;
     private Funcionario funcionario;
 
@@ -65,20 +66,16 @@ public class Cadastro_Funcionario_Activity extends AppCompatActivity {
     private void salvar() {
         try{
             repo_funcionario.inserir(funcionario);
-
             Toast.makeText(this, "salvo", Toast.LENGTH_LONG).show();
             finish();
-
-        }catch (SQLException e){
-            android.app.AlertDialog.Builder dlg= new android.app.AlertDialog.Builder(this);
-            dlg.setTitle("erro");
-            dlg.setMessage(e.getMessage());
-            dlg.setNeutralButton("ok", null);
-            dlg.show();
+        } catch (SQLException e){
+                android.app.AlertDialog.Builder dlg= new android.app.AlertDialog.Builder(this);
+                dlg.setTitle("erro");
+                dlg.setMessage(e.getMessage());
+                dlg.setNeutralButton("ok", null);
+                dlg.show();
         }
-
     }
-
 
     private void botaoCancelar() {
         Button buttonCancelar= findViewById(R.id.buttonCancelarFuncionario);
@@ -126,7 +123,7 @@ public class Cadastro_Funcionario_Activity extends AppCompatActivity {
                         if (isVazio(vCargo)) {
                             cargo.requestFocus();
                             this.notValido = true;
-                        }else{
+                        } else{
                             funcionario.nome      = vNome;
                             funcionario.cpf       = vCPF;
                             funcionario.telefone  = vTelefone;
@@ -147,7 +144,6 @@ public class Cadastro_Funcionario_Activity extends AppCompatActivity {
         boolean resul = (TextUtils.isEmpty(campo) || campo.trim().isEmpty());
         return  resul;
     }
-
 
     private void criarConexao() {
         try {

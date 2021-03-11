@@ -21,11 +21,11 @@ public class Cadastro_Modelo_Activity extends AppCompatActivity {
     private EditText modelo;
     private EditText tipo;
     private EditText valor;
+
     private boolean notValido;
 
     private Repo_modelo repo_modelo;
     private Modelo mod;
-
 
     private SQLiteDatabase conexao;
     private dataOpenHelper dataOH;
@@ -59,8 +59,8 @@ public class Cadastro_Modelo_Activity extends AppCompatActivity {
             repo_modelo.inserir(mod);
             Toast.makeText(this, "salvo", Toast.LENGTH_LONG).show();
             finish();
-        }catch (SQLException e){
-            android.app.AlertDialog.Builder dlg= new android.app.AlertDialog.Builder(this);
+        } catch (SQLException e) {
+            android.app.AlertDialog.Builder dlg = new android.app.AlertDialog.Builder(this);
             dlg.setTitle("erro");
             dlg.setMessage(e.getMessage());
             dlg.setNeutralButton("ok", null);
@@ -68,7 +68,6 @@ public class Cadastro_Modelo_Activity extends AppCompatActivity {
         }
 
     }
-
 
     private void botaoCancelar() {
         Button buttonCancelar=findViewById(R.id.buttonCancelarModelo);
@@ -120,10 +119,8 @@ public class Cadastro_Modelo_Activity extends AppCompatActivity {
     }
 
     public boolean isVazio(String campo){
-        boolean resul= (TextUtils.isEmpty(campo) || campo.trim().isEmpty());
-        return resul;
+        return (TextUtils.isEmpty(campo) || campo.trim().isEmpty());
     }
-
 
     private void criarConexao() {
         try {
@@ -138,7 +135,6 @@ public class Cadastro_Modelo_Activity extends AppCompatActivity {
             dlg.setTitle("erro");
             dlg.setMessage(exe.getMessage());
             dlg.setNeutralButton("ok", null);
-
         }
     }
 

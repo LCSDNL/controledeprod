@@ -24,4 +24,5 @@
     <string name="aviso_EmptyField">Atenção existem campos em branco!</string>
     <string name="OK">OK</string>
     <string name="titulo_Aviso">Aviso!</string>
+    <string name="titulo_main">Inicio</string>
 </resources>
