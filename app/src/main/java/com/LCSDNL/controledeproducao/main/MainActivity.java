@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             dlg.setTitle("erro");
             dlg.setMessage(exe.getMessage());
             dlg.setNeutralButton("ok", null);
+            dlg.show();
 
         }
     }

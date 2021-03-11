@@ -2,15 +2,27 @@ package com.LCSDNL.controledeproducao.cadastroActivity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.solver.state.State;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Context;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.Layout;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 
 import com.LCSDNL.controledeproducao.R;
+import com.LCSDNL.controledeproducao.database.dataOpenHelper;
+import com.LCSDNL.controledeproducao.dominio.entidades.Funcionario;
+import com.LCSDNL.controledeproducao.dominio.repositorio.Repo_funcionario;
 
 public class Cadastro_Funcionario_Activity extends AppCompatActivity {
 
@@ -19,7 +31,14 @@ public class Cadastro_Funcionario_Activity extends AppCompatActivity {
     private EditText telefone;
     private EditText valor;
     private EditText cargo;
+
     private boolean notValido;
+    private Repo_funcionario repo_funcionario;
+    private Funcionario funcionario;
+
+    private SQLiteDatabase conexao;
+    private dataOpenHelper dataOH;
+
 
 
     @Override
@@ -27,7 +46,7 @@ public class Cadastro_Funcionario_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_funcionario);
         setTitle(getString(R.string.titulo_cadastro_de_funcionarios_activity));
-
+        criarConexao();
         preencheCampos();
         botaoSalvar();
         botaoCancelar();
@@ -44,9 +63,20 @@ public class Cadastro_Funcionario_Activity extends AppCompatActivity {
     }
 
     private void salvar() {
+        try{
+            repo_funcionario.inserir(funcionario);
 
-        Toast.makeText(this, "salvo", Toast.LENGTH_LONG).show();
-        finish();
+            Toast.makeText(this, "salvo", Toast.LENGTH_LONG).show();
+            finish();
+
+        }catch (SQLException e){
+            android.app.AlertDialog.Builder dlg= new android.app.AlertDialog.Builder(this);
+            dlg.setTitle("erro");
+            dlg.setMessage(e.getMessage());
+            dlg.setNeutralButton("ok", null);
+            dlg.show();
+        }
+
     }
 
 
@@ -68,6 +98,7 @@ public class Cadastro_Funcionario_Activity extends AppCompatActivity {
     }
 
     private void validarCampos(){
+        this.funcionario = new Funcionario();
         this.notValido = false;
         String vNome    = nome.getText().toString() ;
         String vCPF     = cpf.getText().toString();
@@ -95,6 +126,12 @@ public class Cadastro_Funcionario_Activity extends AppCompatActivity {
                         if (isVazio(vCargo)) {
                             cargo.requestFocus();
                             this.notValido = true;
+                        }else{
+                            funcionario.nome      = vNome;
+                            funcionario.cpf       = vCPF;
+                            funcionario.telefone  = vTelefone;
+                            funcionario.valor     = Double.parseDouble(vValor);
+                            funcionario.cargo     = vCargo;
                         }
 
         if (this.notValido){
@@ -110,5 +147,23 @@ public class Cadastro_Funcionario_Activity extends AppCompatActivity {
         boolean resul = (TextUtils.isEmpty(campo) || campo.trim().isEmpty());
         return  resul;
     }
+
+
+    private void criarConexao() {
+        try {
+
+            dataOH = new dataOpenHelper(this);
+            conexao = dataOH.getWritableDatabase();
+            repo_funcionario = new Repo_funcionario(conexao);
+
+        } catch (SQLException exe) {
+            android.app.AlertDialog.Builder dlg = new android.app.AlertDialog.Builder(this);
+            dlg.setTitle("erro");
+            dlg.setMessage(exe.getMessage());
+            dlg.setNeutralButton("ok", null);
+
+        }
+    }
+
 
 }

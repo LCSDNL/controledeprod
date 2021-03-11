@@ -60,3 +60,10 @@ para o BD e depois retornar eles para exibir na tela de listas. Por enquanto est
 segui alguns tutorias para fazer algumas partes que não sabia. Existem muitas bibliotecas no Java, não
 tem como já sair fazendo, é preciso conhecer algumas técnicas e ferramentas, coisa que só se aprende com
 experiência mesmo.
+
+### dia 6
+
+Percebi que o layout do formulário estava muito grande para alguns aparelhos então adicionei um 
+ScrollView. Testei a conexão com o BD e a função inserir além de mudar o fluxo de salvar nas listas 
+e alguns tratamentos de exceções.
+Com isso acho que as duas activitys de cadastro ficaram prontas.

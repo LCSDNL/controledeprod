@@ -7,4 +7,5 @@ public class Modelo {
     public String tipo;
     public double valor;
 
+
 }
